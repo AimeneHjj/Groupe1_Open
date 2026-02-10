@@ -1,4 +1,4 @@
-dt <- read.csv2("data/tabtrad.csv", header = TRUE) #données chargées
+dt <- read.csv2("Projet/data/vocabulaire.csv", header = TRUE) #données chargées
 fluidPage(
   
   titlePanel("Apprentissage"),
