@@ -13,19 +13,24 @@ fluidPage(
                "Contenu de l'onglet Présentation")
       tabPanel("Apprentissage",
                "Contenu de l'onglet Apprentissage")
-      tabPanel("Paramétrage",
-                fluidPage(
-                h3("Ajouter un mot"), #affiche le titre
-                textInput("mot_fr", "Mot"), #zone d'écriture du mot en français
-                textInput("mot_et", "Mot a traduire"),# zone d'écriture du mot traduit
-                textInput("nouvelle_categorie", "Nouvelle catégorie"), # zone d'écriture de la catégorie
-                selectInput("categorie_existante", "Catégorie",
-                              choices = c("Animaux", "Verbes", "Objets")),# liste déroulante catégorie
-                textInput("nouvelle_langue", "Nouvelle langue"),#zone d'écriture de la langue 
-                selectInput("langue", "Langue",
-                              choices = c("Anglais")),# liste déroulante de la langue 
-                actionButton("Valider_mot", "Valider") # bonton pour valider
-                        ))
+      tabPanel("Paramettrage",
+               fluidPage(
+                 sidebarLayout(
+                   sidebarPanel(
+                     selectInput("categorie_existante", "Catégorie",
+                                 choices = c("Animaux", "Verbes", "Objets")),# liste déroulante catégorie
+                     textInput("nouvelle_categorie", "Nouvelle catégorie"), # zone d'écriture de la catégorie
+                     selectInput("langue", "Langue",
+                                 choices = c("Anglais")),# liste déroulante de la langue 
+                     textInput("nouvelle_langue", "Nouvelle langue"),#zone d'écriture de la langue
+                   ),
+                   mainPanel(
+                     h3("Ajouter un mot"), #affiche le titre
+                     textInput("mot_fr", "Mot"), #zone d'écriture du mot en français
+                     textInput("mot_et", "Mot a traduire"),# zone d'écriture du mot traduit
+                     actionButton("Valider_mot", "Valider") # bonton pour valider
+                   )
+                 )))
       tabPanel("Crédits","Contenu de l'onglet Crédits")
     )
   )
