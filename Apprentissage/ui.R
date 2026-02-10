@@ -51,6 +51,6 @@ fluidPage(
       submitButton("Valider"),
       textOutput("Réponse")
       
-      )
     )
   )
+)
