@@ -87,17 +87,7 @@ ui <- fluidPage(
                           p("Que vous révisiez pour un examen ou que vous prépariez un voyage, notre outil transforme vos listes de mots 
                         en données visuelles claires pour optimiser vos révisions."),
                           
-                          br(),
-                          
-                          div(class = "team-well",
-                              h4("L'Équipe de Création"),
-                              tags$ul(
-                                tags$li(strong("Louis ROMERO")),
-                                tags$li(strong("Aïmène HEJJAJ")),
-                                tags$li(strong("Amir VELLUT")),
-                                tags$li(strong("Brayane SIMO"))
-                              )
-                          )
+                          br()
                       )
                )
              )
