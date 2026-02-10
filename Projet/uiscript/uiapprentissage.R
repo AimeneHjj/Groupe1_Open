@@ -11,8 +11,7 @@ fluidPage(
         "Langue",
         "Langue",
         choices = c(
-          unique(dt$Langue), "Espagnol", "Allemand",
-          "Italien", "Arabe", "Chinois", "Portugais"
+          unique(dt$Langue)
         )
       ),
       
