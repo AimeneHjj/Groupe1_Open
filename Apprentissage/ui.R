@@ -1,4 +1,3 @@
-
 library(shiny)
 
 fluidPage(
@@ -51,6 +50,6 @@ fluidPage(
       submitButton("Valider"),
       textOutput("Réponse")
       
+      )
     )
   )
-)
