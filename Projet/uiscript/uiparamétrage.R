@@ -1,3 +1,4 @@
+dt <- read.csv2("data/tabtrad.csv", header = TRUE)
 sidebarLayout(
              sidebarPanel(
                selectInput("categorie_existante", "Catégorie",
@@ -12,5 +13,8 @@ sidebarLayout(
                textInput("mot_fr", "Mot"), #zone d'écriture du mot en français
                textInput("mot_et", "Mot a traduire"),# zone d'écriture du mot traduit
                actionButton("Valider_mot", "Valider") # bonton pour valider
-               )))
+               )),
+             mainPanel()
+             )
+
 

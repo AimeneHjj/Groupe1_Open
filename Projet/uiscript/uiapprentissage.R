@@ -1,3 +1,4 @@
+dt <- read.csv2("data/tabtrad.csv", header = TRUE)
 fluidPage(
   
   titlePanel("Apprentissage"),
