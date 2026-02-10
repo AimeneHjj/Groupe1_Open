@@ -78,3 +78,4 @@ server <- function(input, output) {
 
 # 3. LANCEMENT
 shinyApp(ui = ui, server = server)
+end
