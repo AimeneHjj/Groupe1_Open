@@ -1,6 +1,6 @@
 library(shiny)
 
-data <- read.csv2("data/tabtrad.csv", header = TRUE)
+dt <- read.csv2("data/tabtrad.csv", header = TRUE)
 
 # Define UI for application
 fluidPage(
