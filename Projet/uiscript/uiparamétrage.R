@@ -5,7 +5,7 @@
                        choices = c("Animaux", "Verbes", "Objets")),# liste déroulante catégorie
            textInput("nouvelle_categorie", "Nouvelle catégorie"), # zone d'écriture de la catégorie
            selectInput("langue", "Langue",
-                       choices = c("Anglais")),# liste déroulante de la langue 
+                       choices = c("", unique(data$Langue)),# liste déroulante de la langue 
            textInput("nouvelle_langue", "Nouvelle langue"),#zone d'écriture de la langue
            ),
            mainPanel(
