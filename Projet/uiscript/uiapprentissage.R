@@ -34,9 +34,7 @@ fluidPage(
       selectInput(
         "categorie",
         "Catégorie",
-        choices = c(
-          "Adverbe", "Animaux", "Meuble",
-          "Pronom", "Temps", "Verbe", "Verbe irrégulier"
+        choices = c(unique(dt$Categorie)
         )
       )
     ),
