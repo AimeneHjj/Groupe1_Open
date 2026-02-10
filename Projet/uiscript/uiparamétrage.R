@@ -1,4 +1,4 @@
-dt <- read.csv2("data/tabtrad.csv", header = TRUE)#données chargées
+dt <- read.csv2("data/vocabulaire.csv", header = TRUE)#données chargées
 sidebarLayout(
              sidebarPanel(
                selectInput("categorie_existante", "Catégorie",
