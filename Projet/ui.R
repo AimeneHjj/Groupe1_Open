@@ -11,8 +11,7 @@ fluidPage(
     tabPanel("Présentation",
              "Contenu de l'onglet Présentation"),
     
-    tabPanel("Apprentissage",
-             source("uiscript/uiapprentissage.R")),
+    tabPanel("Apprentissage", source("uiscript/uiapprentissage.R")),
     
     tabPanel("Paramétrage", source("uiscript/uiparamétrage.R")),
     
