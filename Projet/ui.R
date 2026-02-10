@@ -1,7 +1,5 @@
 library(shiny)
 
-
-
 # Define UI for application
 fluidPage(
   
