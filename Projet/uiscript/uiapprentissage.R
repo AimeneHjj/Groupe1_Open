@@ -15,7 +15,7 @@ fluidPage(
         )
       ),
       
-      checkboxGroupInput(
+      radioButtons(
         "Sens",
         "Sens de traduction",
         choices = c(
@@ -24,7 +24,7 @@ fluidPage(
         )
       ),
       
-      checkboxGroupInput(
+      radioButtons(
         "Mode",
         "Mode d'apprentissage",
         choices = c("random", "Renfo")
