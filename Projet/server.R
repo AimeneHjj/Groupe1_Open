@@ -1,12 +1,13 @@
 library(shiny)
 
-function(output, input, session){
+function(input, session){
   
   observeEvent(input$go_apprentissage, {
-    showNotification("Bouton cliqué !", type = "message")
     updateTabsetPanel(session = session, inputId = "maintab", selected = "Apprentissage")
   })
+}
 
+function(input, output, session){
 ###################AFFICHER LE MOT#############################
 #Select by langue
 #Si étranger vers francais alors colonne "mot" Sinon colonne "Traduction"
