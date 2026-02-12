@@ -1,5 +1,12 @@
 library(shiny)
 
+function(output, input, session){
+  
+  observeEvent(input$go_apprentissage, {
+    showNotification("Bouton cliqué !", type = "message")
+    updateTabsetPanel(session = session, inputId = "maintab", selected = "Apprentissage")
+  })
+
 ###################AFFICHER LE MOT#############################
 #Select by langue
 #Si étranger vers francais alors colonne "mot" Sinon colonne "Traduction"
@@ -7,7 +14,6 @@ library(shiny)
 #Si random est coché alors -> tirage aléatoire de la ligne Sinon tirage renfo 
 #print le mot choisi dans output$Traduction 
 #Mettre dasn un objet le mot tiré
-function(output, input, session){
   observeEvent(input$Valider, {
 
   #source("le nom de votre fichier")
@@ -46,4 +52,5 @@ function(output, input, session){
 # output$Réponse <- renderText(print("La réponse est : "))
 
 }
+
 
