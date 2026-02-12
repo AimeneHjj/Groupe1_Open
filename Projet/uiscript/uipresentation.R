@@ -76,11 +76,11 @@ fluidPage(
                           
                           br()
                       ), style = "text-align: right;",
-                      actionButton(
-                        "go_apprentissage",
-                        "Apprentissage")
-               )
-               
+                      
+               ),div(style = "text-align: right;",
+               actionButton(
+                 "go_apprentissage",
+                 "-> Apprentissage"))
              )
     )
 

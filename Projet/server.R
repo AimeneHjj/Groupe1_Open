@@ -1,7 +1,9 @@
 library(shiny)
 shinyServer(
 function(input, output, session){
-  
+  observeEvent(input$go_apprentissage,{
+    updateTabsetPanel(inputId = "maintab", selected = "Apprentissage")
+  })
   source("serverscript/server_script_apprentissage.R", local = TRUE)
   source("serverscript/server_verif_mot.R", local = TRUE)
 
