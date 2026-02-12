@@ -47,6 +47,9 @@ fluidPage(
       textInput(
         "Exo",
         "Traduire le mot : "),
+      actionButton(
+        "Valider",
+        "Valider"),
       textOutput("Réponse")
       )
     )
