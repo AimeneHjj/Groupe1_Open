@@ -11,7 +11,7 @@ fluidPage(
         "Langue",
         "Langue",
         choices = c(
-          "TOUT", unique(dt$Langue)
+          "TOUT",unique(dt$Langue)
         )
       ),
       
@@ -19,37 +19,36 @@ fluidPage(
         "Sens",
         "Sens de traduction",
         choices = c(
-          "Thème (Étrangère -> Français)",
-          "Version (Français -> étrangère)"
+          "Étrangère -> Français",
+          "Français -> étrangère"
         )
       ),
       
       radioButtons(
         "Mode",
         "Mode d'apprentissage",
-        choices = c("random", "Renfo")
+        choices = c("Random", "Renfo")
       ),
       
       selectInput(
         "categorie",
         "Catégorie",
-        choices = c("TOUT", unique(dt$Categorie))
+        choices = c("TOUT",unique(dt$Categorie)
+        )
+      ),
+      actionButton(
+        "Tirer",
+        "Tirer un mot à traduire"
       )
     ),
     
     mainPanel(
-      
-      # Scores en haut à droite du mot à traduire
-      fluidRow(
-        column(8, textOutput("Traduction")),
-        column(4, textOutput("meilleur_score"),
-               textOutput("score")
-        )
-      ),
-      
-      textInput("Exo", "Traduire le mot :"),
-      submitButton("Valider"),
+      textOutput("Traduction"),
+      textInput(
+        "Exo",
+        "Traduire le mot : "),
       textOutput("Réponse")
+      )
     )
   )
-)
+
