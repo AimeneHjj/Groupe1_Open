@@ -16,7 +16,6 @@ function(input, output, session){
 #Si random est coché alors -> tirage aléatoire de la ligne Sinon tirage renfo 
 #print le mot choisi dans output$Traduction 
 #Mettre dasn un objet le mot tiré
-  observeEvent(input$Valider, {
 
   source("serverscript/server_script_apprentissage.R")
   
@@ -50,9 +49,8 @@ function(input, output, session){
 
 # Define server logic
 #function(input, output) {
-#output$Traduction <- renderText(print("Mot à traduire : "))
+output$Traduction <- renderText(print("Mot à traduire : "))
 # output$Réponse <- renderText(print("La réponse est : "))
 
-}
-)
+
 
