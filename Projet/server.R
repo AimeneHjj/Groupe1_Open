@@ -5,7 +5,7 @@ function(input, output, session){
   observeEvent(input$go_apprentissage, {
     print("bouton cliqué !")  # ← on va vérifier dans la console
     updateTabsetPanel(session = session, inputId = "maintab", selected = "Apprentissage")
-  }, ignoreNULL = FALSE, ignoreInit = TRUE)
+  })
 
 
 
