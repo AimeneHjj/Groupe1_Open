@@ -1,6 +1,8 @@
+#création des réactive pour le score et la réponse
 s <- reactiveValues(score = 0, meilleur_score = 0)
 reponse_text <- reactiveVal("")
 
+#récupère le mot réponse a partir du mot tiré
 answer <- reactive({
   if(input$Sens == "Étrangère -> Français"){
     rawans <- which(dt$Traduction == mot()[[1]])[1]
@@ -9,6 +11,8 @@ answer <- reactive({
     rawans <- which(dt$Mot == mot()[[1]])[1]
     answ <- as.character(dt[rawans, 2])
   }})
+
+#Après avoir appuyé sur le bouton valider -> vérification du mot et màj su score
 observeEvent(input$Valider, {
   idx <- mot_index()
   
@@ -31,6 +35,7 @@ observeEvent(input$Valider, {
   }
 })
 
+#Affichage de la réponse et de du score
 output$Réponse <- renderText({
   reponse_text()
 })
