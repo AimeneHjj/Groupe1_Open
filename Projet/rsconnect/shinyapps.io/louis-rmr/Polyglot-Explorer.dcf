@@ -1,0 +1,12 @@
+name: Polyglot-Explorer
+title: Polyglot-Explorer
+username: louis-rmr
+account: louis-rmr
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16669419
+bundleId: 11577571
+url: https://louis-rmr.shinyapps.io/Polyglot-Explorer/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
