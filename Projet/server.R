@@ -11,6 +11,7 @@ function(input, output, session){
   
   source("serverscript/server_script_apprentissage.R", local = TRUE)
   source("serverscript/server_verif_mot.R", local = TRUE)
+  source("serverscript/Server_Ajout.R", local = TRUE)
 
   observeEvent(input$go_apprentissage,{
     updateTabsetPanel(inputId = "maintab", selected = "Apprentissage")
