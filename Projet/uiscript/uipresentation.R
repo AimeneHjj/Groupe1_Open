@@ -1,7 +1,7 @@
 library(shiny)
 
 # 1. L'INTERFACE AVEC DESIGN ET DRAPEAUX 
-ui <- fluidPage(
+fluidPage(
   tags$head(
     tags$style(HTML("
       body { 
@@ -47,8 +47,6 @@ ui <- fluidPage(
   
   div(class = "title-header", h1("Polyglot Explorer")),
   
-  tabsetPanel(
-    tabPanel("🌟 Notre Mission",
              fluidRow(
                column(10, offset = 1,
                       br(),
@@ -77,9 +75,12 @@ ui <- fluidPage(
                         en données visuelles claires pour optimiser vos révisions."),
                           
                           br()
-                      )
-               )
+                      ), style = "text-align: right;",
+                      
+               ),div(style = "text-align: right;",
+               actionButton(
+                 "go_apprentissage",
+                 "-> Apprentissage"))
              )
     )
-  )
-)
+

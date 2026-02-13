@@ -1,13 +1,11 @@
 library(shiny)
-
-# Define UI for application
+shinyUI(
 fluidPage(
   
-  # Application title
   titlePanel("Application de Traduction"),
   
   # Création des 4 onglets
-  tabsetPanel(
+  tabsetPanel( id="maintab",
     tabPanel("Présentation",
              source("uiscript/uipresentation.R")),
     
@@ -18,4 +16,5 @@ fluidPage(
     tabPanel("Crédits",
              source("uiscript/uicredit.R"))
   )
+)
 )

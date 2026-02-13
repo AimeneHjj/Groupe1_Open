@@ -15,19 +15,19 @@ fluidPage(
         )
       ),
       
-      checkboxGroupInput(
+      radioButtons(
         "Sens",
         "Sens de traduction",
         choices = c(
-          "Thème (Étrangère -> Français)",
-          "Version (Français -> étrangère)"
+          "Étrangère -> Français",
+          "Français -> étrangère"
         )
       ),
       
-      checkboxGroupInput(
+      radioButtons(
         "Mode",
         "Mode d'apprentissage",
-        choices = c("random", "Renfo")
+        choices = c("Random", "Renfo")
       ),
       
       selectInput(
@@ -35,6 +35,10 @@ fluidPage(
         "Catégorie",
         choices = c("TOUT",unique(dt$Categorie)
         )
+      ),
+      actionButton(
+        "Tirer",
+        "Tirer un mot à traduire"
       )
     ),
     
@@ -43,8 +47,12 @@ fluidPage(
       textInput(
         "Exo",
         "Traduire le mot : "),
-      submitButton("Valider"),
-      textOutput("Réponse")
+      actionButton(
+        "Valider",
+        "Valider"),
+      textOutput("Réponse"),
+      textOutput("meilleur_score"),
+      textOutput("score")
       )
     )
   )
